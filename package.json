@@ -5,15 +5,32 @@
   "author": "Rahul",
   "license": "MIT",
   "type": "module",
-
+  "keywords": [
+    "react",
+    "react-component",
+    "react-widget",
+    "sponsor",
+    "sponsorship",
+    "support-widget",
+    "buy-me-a-coffee",
+    "donation-widget",
+    "funding-widget",
+    "creator-support",
+    "open-source-support",
+    "tailwind",
+    "typescript",
+    "react-18",
+    "frontend",
+    "ui-component"
+  ],
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "unpkg": "dist/index.umd.js",
   "jsdelivr": "dist/index.umd.js",
   "types": "dist/index.d.ts",
-
-  "files": ["dist"],
-
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
       "import": "./dist/index.esm.js",
@@ -21,34 +38,26 @@
       "types": "./dist/index.d.ts"
     }
   },
-
   "sideEffects": false,
-
   "repository": {
     "type": "git",
     "url": "https://github.com/rahul-vyas-dev/open-sponsor-widget"
   },
-
   "homepage": "https://github.com/rahul-vyas-dev/open-sponsor-widget#readme",
-
   "bugs": {
     "url": "https://github.com/rahul-vyas-dev/open-sponsor-widget/issues"
   },
-
   "scripts": {
     "build": "rollup -c",
     "prepublishOnly": "npm run build"
   },
-
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18"
   },
-
   "dependencies": {
     "tslib": "^2.8.1"
   },
-
   "devDependencies": {
     "@rollup/plugin-commonjs": "^29.0.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
