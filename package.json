@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Reusable React widget to add a sponsored support section to your website.",
   "author": "Rahul",
-  "license": "ISC",
+  "license": "MIT",
   "type": "module",
 
   "main": "dist/index.cjs.js",
@@ -26,13 +26,13 @@
 
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/open-sponsor-widget"
+    "url": "https://github.com/rahul-vyas-dev/open-sponsor-widget"
   },
 
-  "homepage": "https://github.com/your-username/open-sponsor-widget#readme",
+  "homepage": "https://github.com/rahul-vyas-dev/open-sponsor-widget#readme",
 
   "bugs": {
-    "url": "https://github.com/your-username/open-sponsor-widget/issues"
+    "url": "https://github.com/rahul-vyas-dev/open-sponsor-widget/issues"
   },
 
   "scripts": {
