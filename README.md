@@ -41,17 +41,63 @@ pnpm add open-sponsor-widget
 
 ```js
 import React from "react";
-import { OpenSponsorWidget } from "open-sponsor-widget";
+import { SponsorWidget } from 'open-sponsor-widget';
+
+// Add the following line to import the CSS styles for the widget
+import "open-sponsor-widget/style.css";
 
 function App() {
   return (
     <div>
-      <OpenSponsorWidget
-        title="Support This Project"
-        description="If you enjoy this project, consider supporting it."
-        buttonText="Buy Me a Coffee"
-        link="https://buymeacoffee.com/yourname"
-      />
+      <SponsorWidget
+        title="Title of the Widget"
+        description="A brief description about the sponsorship or support you are seeking."
+        links={[
+          {
+            platform: "buymeacoffee",
+            url: "https://www.buymeacoffee.com/yourprofile",
+          },
+          {
+            platform: "patreon",
+            url: "https://www.patreon.com/yourprofile",
+          },
+          {
+            platform: "github",
+            url: "https://github.com/yourprofile",
+          },
+          {
+            platform: "custom",
+            name: "Ko-fi",
+            url: "https://ko-fi.com/yourprofile",
+          },
+        ]}
+        hero={{
+          image: "https://tse4.mm.bing.net/th/id/OIP.IDq8cZVcGfgwgkR1Bt0RywHaEo?rs=1&pid=ImgDetMain&o=7&rm=3",
+          imageAlt: "Support Us",
+        }}
+        previousSponsors={[
+          {
+            name: "Alice",
+            avatar: "Avatar URL",
+            profileUrl: "Profile URL",
+          },
+          {
+            name: "Alice",
+            avatar: "Avatar URL",
+            profileUrl: "Profile URL",
+          },
+          {
+            name: "Alice",
+            avatar: "Avatar URL",
+            profileUrl: "Profile URL",
+          },
+          {
+            name: "Alice",
+            avatar: "Avatar URL",
+            profileUrl: "Profile URL",
+          },
+        ]}
+      ></SponsorWidget>
     </div>
   );
 }
@@ -62,11 +108,21 @@ export default App;
 ## 🧩 Props API
 
 | Prop         | Type   | Required | Description |
-|------------- |--------|----------|------------|
+|------------- |--------|----------|------------ |
 | `title`      | string | Yes      | Main heading of the widget |
 | `description`| string | Yes      | Supporting text below title |
-| `buttonText` | string | Yes      | Button label |
+| `goal`       | object | No       | Optional goal object with `amount` and `currency` properties |
 | `link`       | string | Yes      | Redirect URL when button is clicked |
+| `hero`       | object | No       | Optional hero image with `image` and `imageAlt` properties |
+| `previousSponsors` | array of objects | No | Optional list of previous sponsors with `name`, `avatar`, and `profileUrl` properties |
+|layout        | string | No       | Optional layout style (e.g., "default", "compact", "minimal", "card", "inline") |
+|theme         | string | No       | Optional theme (e.g., "light", "dark") |
+|className     | string | No       | Optional additional CSS class for custom styling |
+|containerClassName | string | No       | Optional CSS class for the widget container |
+|openInNewTab  | boolean | No       | Optional flag to open links in a new tab (default: false) |
+|animation     | Object | No       | Optional animation style (e.g., "enabled", "hoverScale", "fadeIn", "duration") |
+|renderSponsor | Function | No       | Optional custom render function for sponsors (receives sponsor data as argument) |
+|renderButton  | Function | No       | Optional custom render function for the call-to-action button (receives button props as argument) |
 
 ---
 

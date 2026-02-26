@@ -1,6 +1,5 @@
 import React from "react";
 import { SponsorWidgetProps, SponsorLink, PreviousSponsor } from "../types/Index";
-import "../styles/Style.css";
 
 /* =========================================================
    Internal Helpers
